@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+		box-sizing: border-box;
+}
+
+body {
+		margin: 0;
+		text-transform: capitalize;
+		background: #eaeaff;
+		height: 100vh;
+}
+
+main {
+		height: 100%;
+}
+
+section {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem 0;
+}
+
+.gift-img {
+		box-shadow: 1px 0px 5px 1px #000;
+}
+
+.gift-img > img {
+		width: 100%;
+		height: 100%;
+}
+
+.giveaway-info {
+		padding: 0 1rem;
+}
+
+.giveaway-info h3 {
+		text-transform: uppercase;
+		text-decoration: underline;
+		font-size: clamp(1.3em, 3vw, 2.8em);
+		color: #8098ff;
+}
+
+.giveaway-info h4 {
+		text-transform: capitalize;
+		font-size: clamp(1em, 3vw, 2.3em);
+}
+
+.giveaway-info p {
+		text-transform: capitalize;
+		font-size: clamp(1em, 3vw, 2em);
+		margin-bottom: 3rem;
+		color: rgba(0,0,0,0.7);
+}
+
+.deadline-date {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);	
+		text-align: center;
+		gap: 0 1rem;
+}
+
+.deadline h4 {
+		font-weight: bold;
+		font-size: clamp(1.8em, 3vw, 3em);
+		margin: 0;
+}
+
+.deadline span {
+		font-size: clamp(0.9em, 3vw, 1.1em);		
+}
+
+.deadline {
+		background: black;
+		color: #fff;
+		padding: 1rem;
+}
+
+
+/*For bigger screen*/
+@media screen and (min-width: 1024px){
+main {
+		display: grid;
+		place-items: center;
+}
+
+section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		gap: 0 1rem;
+}
+
+.gift-img > img {
+		height: 50%;
+}
+
+.gift-img {
+		box-shadow: none;
+		display: grid;
+		place-items: center;
+}
+}
+
+@media screen and (min-width: 2560px) {
+		section {
+				place-items: center;
+		}
+		
+		.gift-img > img {
+				height: 100%;
+		}
+}
